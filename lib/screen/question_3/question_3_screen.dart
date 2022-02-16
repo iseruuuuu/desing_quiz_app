@@ -1,6 +1,7 @@
 import 'package:design_quiz_app/screen/question_1/children/image_item.dart';
 import 'package:design_quiz_app/screen/question_1/question_1_screen_controller.dart';
 import 'package:design_quiz_app/screen/question_2/question_2_screen_controller.dart';
+import 'package:design_quiz_app/screen/question_3/question_3_screen_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +12,7 @@ class Question3Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(Question2ScreenController());
+    final controller = Get.put(Question3ScreenController());
     return Scaffold(
       backgroundColor: Colors.black87,
       body: Column(

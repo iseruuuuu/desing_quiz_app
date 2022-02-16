@@ -1,4 +1,5 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:design_quiz_app/screen/question_4/question_4_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +20,7 @@ class Question3ScreenController extends GetxController {
       btnCancelColor: Colors.green,
       dismissOnBackKeyPress: true,
       btnCancelOnPress: () {
-        Get.back();
+        Get.to(const Question4Screen());
       },
     ).show();
   }
