@@ -1,11 +1,14 @@
 import 'package:design_quiz_app/screen/question_1/children/image_item.dart';
+import 'package:design_quiz_app/screen/question_1/question_1_screen_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Question1Screen extends StatelessWidget {
   const Question1Screen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(Question1ScreenController());
     return Scaffold(
       backgroundColor: Colors.black87,
       body: Column(
@@ -16,7 +19,7 @@ class Question1Screen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
-                onTap: () {},
+                onTap: controller.onTapCorrect,
                 child: const ImageItem(
                   message1: 'which of these images looks "more correct?',
                   message2: 'Click the correct image',
@@ -29,7 +32,7 @@ class Question1Screen extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: controller.onTapIncorrect,
                 child: const ImageItem(
                   message1: 'which of these images looks "more correct?',
                   message2: 'Click the correct image',
